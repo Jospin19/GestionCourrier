@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0886583A-2501-402F-9229-D3CE427C72A7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GestionCourriers</RootNamespace>
+    <AssemblyName>GestionCourriers</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BunifuDataViz 1.0.1, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\Bunifu Dataviz 1.0.1\BunifuDataViz 1.0.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Bunifu Technologies\Bunifu Framework Manager\bin\updates\Bunifu_UI_1.5\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="views\CourrierUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\CourrierUser.Designer.cs">
+      <DependentUpon>CourrierUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\EnregistrementUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\EnregistrementUser.Designer.cs">
+      <DependentUpon>EnregistrementUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\FormConnexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\FormConnexion.Designer.cs">
+      <DependentUpon>FormConnexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="models\Courrier.cs" />
+    <Compile Include="models\Enregistrement.cs" />
+    <Compile Include="models\Expediteur.cs" />
+    <Compile Include="models\Expedition.cs" />
+    <Compile Include="models\GestionnaireConnexion.cs" />
+    <Compile Include="models\Secretaire.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="views\FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\HomeUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\HomeUser.Designer.cs">
+      <DependentUpon>HomeUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\StatistiqueUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\StatistiqueUser.Designer.cs">
+      <DependentUpon>StatistiqueUser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="views\CourrierUser.resx">
+      <DependentUpon>CourrierUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\EnregistrementUser.resx">
+      <DependentUpon>EnregistrementUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\FormConnexion.resx">
+      <DependentUpon>FormConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\HomeUser.resx">
+      <DependentUpon>HomeUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\StatistiqueUser.resx">
+      <DependentUpon>StatistiqueUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="views\MyIcons\094-teacher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="views\MyIcons\delivery-cart-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="views\MyIcons\bag-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="views\MyIcons\medical-history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="views\MyIcons\026-graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="views\MyIcons\fireplace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\004-new-email-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\price-tag-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\026-studying.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\022-homework.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stamp-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\067-paper-plane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\070-phone-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\067-paper-plane1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\029-book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="views\MyIcons\history.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
